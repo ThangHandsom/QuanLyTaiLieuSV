@@ -262,3 +262,4 @@ C:\Users\DELL\source\repos\webapp1\WebApp1\bin\Debug\net8.0\X.PagedList.dll
 C:\Users\DELL\source\repos\webapp1\WebApp1\bin\Debug\net8.0\X.PagedList.Mvc.Core.dll
 C:\Users\DELL\source\repos\webapp1\WebApp1\obj\Debug\net8.0\WebApp1.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\DELL\source\repos\webapp1\WebApp1\bin\Debug\net8.0\elFinder.NetCore.dll
+C:\Users\DELL\source\repos\webapp1\WebApp1\obj\Debug\net8.0\WebApp1.sourcelink.json

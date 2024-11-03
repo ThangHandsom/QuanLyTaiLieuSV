@@ -19,9 +19,9 @@ namespace WebApp1.Models
         public string? Class { get; set; }
         public string? StudentCode { get; set; }
         public string? Phone { get; set; }
-
         public string? Email { get; set; }
-
+        public string? Gender { get; set; }
+        public DateTime? Birth { get; set; }
         public int? RoleID { get; set; }
 
         public string? LastLogin { get; set; }

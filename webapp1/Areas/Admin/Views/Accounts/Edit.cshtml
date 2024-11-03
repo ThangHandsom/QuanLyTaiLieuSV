@@ -1,0 +1,95 @@
+﻿@model WebApp1.Models.Account
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<main id="main" class="main">
+    <div class="container shadow p-4">
+        <div class="pagetitle">
+            <h2>Chỉnh sửa tài khoản</h2>
+        </div>
+        <form asp-action="Edit">
+            <input type="hidden" asp-for="AccountID" />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="UserName">Tên đăng nhập</label>
+                <input type="text" class="form-control mb-3" asp-for="UserName" placeholder="Nhập tên đăng nhập" readonly />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="FullName">Họ và tên</label>
+                <input type="text" class="form-control mb-3" asp-for="FullName" placeholder="Nhập họ và tên" />
+                <span asp-validation-for="FullName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password">Mật khẩu</label>
+                <input type="password" class="form-control mb-3" asp-for="Password" placeholder="Nhập mật khẩu" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email">Email</label>
+                <input type="email" class="form-control mb-3" asp-for="Email" placeholder="Nhập email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RoleID">Quyền</label>
+                <select asp-for="RoleID" class="form-control mb-3">
+                    <option value="1">Quản trị viên</option>
+                    <option value="2">Giảng viên</option>
+                    <option value="3">Sinh viên</option>
+                </select>
+                <span asp-validation-for="RoleID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone">Số điện thoại</label>
+                <input type="text" class="form-control mb-3" asp-for="Phone" placeholder="Nhập số điện thoại" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Class">Lớp học</label>
+                <input type="text" class="form-control mb-3" asp-for="Class" placeholder="Nhập lớp học" />
+                <span asp-validation-for="Class" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="StudentCode">Mã sinh viên</label>
+                <input type="text" class="form-control mb-3" asp-for="StudentCode" placeholder="Nhập mã sinh viên" />
+                <span asp-validation-for="StudentCode" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Gender">Giới tính</label>
+                <select asp-for="Gender" class="form-control mb-3">
+                    <option value="Nam">Nam</option>
+                    <option value="Nữ">Nữ</option>
+                    <option value="Khác">Khác</option>
+                </select>
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Birth">Ngày sinh</label>
+                <input type="date" class="form-control mb-3" asp-for="Birth" />
+                <span asp-validation-for="Birth" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-1 mb-1">
+                <label>
+                    @Html.CheckBox("IsActive", Model.IsActive)
+                    Hoạt động
+                </label>
+            </div>
+
+            <a href="javascript:history.back()" class="btn btn-lg btn-warning">
+                <i class="bi bi-box-arrow-in-left"></i> Quay lại
+            </a>
+
+            <button type="submit" value="Save" class="btn btn-lg btn-primary p-2">
+                <i class="bi bi-clipboard-plus"></i> Lưu
+            </button>
+        </form>
+    </div>
+</main>

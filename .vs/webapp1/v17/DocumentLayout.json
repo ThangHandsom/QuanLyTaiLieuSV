@@ -1,12 +1,104 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\DELL\\source\\repos\\webapp1\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{901AFD1F-CEF0-43A4-A306-52B455A929A3}|WebApp1\\WebApp1.csproj|c:\\users\\dell\\source\\repos\\webapp1\\webapp1\\areas\\admin\\controllers\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{901AFD1F-CEF0-43A4-A306-52B455A929A3}|WebApp1\\WebApp1.csproj|solutionrelative:webapp1\\areas\\admin\\controllers\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{901AFD1F-CEF0-43A4-A306-52B455A929A3}|WebApp1\\WebApp1.csproj|c:\\users\\dell\\source\\repos\\webapp1\\webapp1\\areas\\admin\\models\\adminmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{901AFD1F-CEF0-43A4-A306-52B455A929A3}|WebApp1\\WebApp1.csproj|solutionrelative:webapp1\\areas\\admin\\models\\adminmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{901AFD1F-CEF0-43A4-A306-52B455A929A3}|WebApp1\\WebApp1.csproj|c:\\users\\dell\\source\\repos\\webapp1\\webapp1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{901AFD1F-CEF0-43A4-A306-52B455A929A3}|WebApp1\\WebApp1.csproj|solutionrelative:webapp1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{901AFD1F-CEF0-43A4-A306-52B455A929A3}|WebApp1\\WebApp1.csproj|c:\\users\\dell\\source\\repos\\webapp1\\webapp1\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{901AFD1F-CEF0-43A4-A306-52B455A929A3}|WebApp1\\WebApp1.csproj|solutionrelative:webapp1\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{901AFD1F-CEF0-43A4-A306-52B455A929A3}|WebApp1\\WebApp1.csproj|c:\\users\\dell\\source\\repos\\webapp1\\webapp1\\areas\\admin\\views\\accounts\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{901AFD1F-CEF0-43A4-A306-52B455A929A3}|WebApp1\\WebApp1.csproj|solutionrelative:webapp1\\areas\\admin\\views\\accounts\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MenuController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\webapp1\\webapp1\\Areas\\Admin\\Controllers\\MenuController.cs",
+              "RelativeDocumentMoniker": "webapp1\\Areas\\Admin\\Controllers\\MenuController.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\webapp1\\webapp1\\Areas\\Admin\\Controllers\\MenuController.cs",
+              "RelativeToolTip": "webapp1\\Areas\\Admin\\Controllers\\MenuController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAgAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T16:07:47.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminMenu.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\webapp1\\webapp1\\Areas\\Admin\\Models\\AdminMenu.cs",
+              "RelativeDocumentMoniker": "webapp1\\Areas\\Admin\\Models\\AdminMenu.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\webapp1\\webapp1\\Areas\\Admin\\Models\\AdminMenu.cs",
+              "RelativeToolTip": "webapp1\\Areas\\Admin\\Models\\AdminMenu.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T16:07:39.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\webapp1\\webapp1\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "webapp1\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\webapp1\\webapp1\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "webapp1\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T16:07:10.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\webapp1\\webapp1\\Areas\\Admin\\Views\\Accounts\\Details.cshtml",
+              "RelativeDocumentMoniker": "webapp1\\Areas\\Admin\\Views\\Accounts\\Details.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\webapp1\\webapp1\\Areas\\Admin\\Views\\Accounts\\Details.cshtml",
+              "RelativeToolTip": "webapp1\\Areas\\Admin\\Views\\Accounts\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T02:30:34.163Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\webapp1\\webapp1\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "webapp1\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\webapp1\\webapp1\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "webapp1\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T02:27:27.574Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

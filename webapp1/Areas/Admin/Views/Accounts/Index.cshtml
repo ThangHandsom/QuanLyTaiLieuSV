@@ -1,0 +1,65 @@
+﻿@model IPagedList<Account>
+@using X.PagedList;
+@using X.PagedList.Mvc.Core;
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<main id="main" class="main">
+    <div class="pagetitle">
+        <h2>Danh sách tài khoản</h2>
+    </div>
+
+    <section class="section dashboard">
+        <div class="row">
+            <div class="col-12">
+                <div class="card recent-sales overflow-auto">
+                    <div class="card-body mt-4">
+                        <table class="table table-borderless datatable">
+                            <thead>
+                                <tr>
+                                    <th class="col-1 text-center border">Thứ tự</th>
+                                    <th class="col-3 text-center border">Tên tài khoản</th>
+                                    <th class="col-2 text-center border">Quyền</th>
+                                    <th class="col-1 text-center border">Trạng thái</th>
+                                    <th class="col-2 text-center border">Chức năng</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    int i = 1;
+                                }
+                                @foreach (var item in Model)
+                                {
+                                    <tr id="tr_@item.AccountID">
+                                        <td class="text-center border">@(i++)</td>
+                                        <td class="text-center border">@item.UserName</td>
+                                        <td class="text-center border">@item.RoleID</td>
+                                        <td class="text-center border">@item.IsActive</td>
+                                        <td class="text-center border">
+                                            <a asp-area="Admin" asp-controller="Accounts" asp-action="Edit"
+                                               asp-route-id="@item.AccountID" class="btn btn-primary "
+                                            title="Sửa thông tin "><i class="bi bi-pencil-square"></i></a> |
+                                            <a asp-area="Admin" asp-controller="Accounts" asp-action="Details"
+                                               asp-route-id="@item.AccountID" class="btn btn-info "
+                                               title="Chi tiết "><i class="bi bi-eye"></i></a> |
+                                            <a asp-area="Admin" asp-controller="Accounts" asp-action="Delete"
+                                               asp-route-id="@item.AccountID" class="btn btn-danger "
+                                           title="Xóa "><i class="bi bi-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        @Html.PagedListPager(Model, page => Url.Action("index", new { page = page }), new PagedListRenderOptions()
+                           {
+                               ActiveLiElementClass = "active",
+                               PageClasses = new[] { "page-link" },
+                               LiElementClasses = new[] { "page-item" },
+                               UlElementClasses = new[] { "pagination", "justify-content-center" },
+                           })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

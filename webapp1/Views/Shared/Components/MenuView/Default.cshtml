@@ -1,4 +1,5 @@
 ﻿@using WebApp1.Utilities
+@using Microsoft.AspNetCore.Http; 
 @model IList<Menu>
 <!-- Navbar & Carousel Start -->
 <div class="container-fluid position-relative p-0">
@@ -13,7 +14,7 @@
             <div class="navbar-nav ms-auto py-0">
                 @foreach (var menu in Model.Where(m => m.Levels == 1).OrderBy(n => n.MenuOrder))
                 {
-                    var Pid = menu.MenuID;                 
+                    var Pid = menu.MenuID;
                     var Smenu = Model.Where(p => p.ParentID == Pid).OrderBy(p => p.MenuOrder).ToList();
                     @if (Smenu.Count == 0)
                     {
@@ -33,8 +34,29 @@
                     }
                 }
             </div>
-            <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
-            <a href="/admin" class="btn btn-primary py-2 px-4 ms-3">Admin</a>
+            <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal">
+                <i class="fa fa-search"></i>
+            </button>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <div>
+                    <span class="text-light me-3">
+                        Xin chào,
+                        <a asp-controller="Account" asp-action="Profile" class="text-decoration-none text-light fw-bold">
+                            @User.Identity.Name!
+                        </a>
+                    </span> |
+                    @if (User.Identity.IsAuthenticated && (User.IsInRole("1")))
+                    {
+                        <a href="/admin" class="btn btn-primary py-2 px-4 ms-3">Trang quản trị</a>
+                    }
+                    <a href="/Account/Logout" class="btn btn-primary py-2 px-4 ms-3">Đăng Xuất</a>
+                </div>
+            }
+            else
+            {
+                <a href="/Account/Login" class="btn btn-primary py-2 px-4 ms-3">Đăng Nhập</a>
+            }
         </div>
     </nav>
 
