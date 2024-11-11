@@ -35,11 +35,14 @@ namespace WebApp1.Controllers
                 Functions._Message = "Sai tên đăng nhập hoặc mật khẩu!";
                 return View("Login");
             }
+
             Functions._Message = string.Empty;
+
             var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.Name, user.UserName),
                 new Claim(ClaimTypes.Role, user.RoleID.ToString()),
+                new Claim("AccountId", user.AccountID.ToString()) 
             };
 
             var claimsIdentity = new ClaimsIdentity(
@@ -52,6 +55,7 @@ namespace WebApp1.Controllers
 
             return RedirectToAction("Index", "Home");
         }
+
         public IActionResult Register()
         {
             return View();
@@ -90,6 +94,8 @@ namespace WebApp1.Controllers
                 {
                     new Claim(ClaimTypes.Name, newUser.UserName),
                     new Claim(ClaimTypes.Role, newUser.RoleID.ToString()),
+                     new Claim("AccountId", newUser.AccountID.ToString()) // Thêm AccountId vào claims
+
                 };
 
                 var claimsIdentity = new ClaimsIdentity(

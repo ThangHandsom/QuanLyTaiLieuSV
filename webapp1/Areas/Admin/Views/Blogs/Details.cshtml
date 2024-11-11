@@ -23,12 +23,15 @@
                                     <p><strong>Người tạo:</strong> @Model.CreatedBy</p>
                                     <p><strong>Liên kết bài viết:</strong> @Model.Alias</p>
                                     <p><strong>Mô tả:</strong> @Model.Description</p>
-                                    <p><strong>Nội dung chi tiết:</strong> @Model.Detail</p>
+                                    <p><strong>Nội dung chi tiết:</strong> @Html.Raw(Model.Detail)</p>
                                     <div class="mt-4">
                                         <a href="javascript:history.back()" class="btn btn-lg btn-warning"><i class="bi bi-box-arrow-in-left"></i> Quay lại</a> |
                                         <a asp-area="Admin" asp-controller="Blogs" asp-action="Edit"
                                            asp-route-id="@Model.BlogID" class="btn btn-primary "
                                            title="Sửa thông tin "><i class="bi bi-pencil-square"></i> Chỉnh sửa</a>
+                                        <a asp-area="Admin" asp-controller="BlogComments" asp-action="Index"
+                                           asp-route-id="@Model.BlogID" class="btn btn-success "
+                                           title="xem bình luận "><i class="bi bi-pencil-square"></i> Xem bình luận</a>
                                     </div>
                                 </div>
                             </div>

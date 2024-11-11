@@ -31,5 +31,9 @@ namespace WebApp1.Models
 
         public virtual Role? Role { get; set; }
         public virtual ICollection<Blog> Blogs { get; set; } = new List<Blog>();
+        public virtual ICollection<BlogComment> BlogComments { get; set; } = new List<BlogComment>();
+
+        public virtual ICollection<SubComment> SubComments { get; set; } = new List<SubComment>();
+
     }
 }

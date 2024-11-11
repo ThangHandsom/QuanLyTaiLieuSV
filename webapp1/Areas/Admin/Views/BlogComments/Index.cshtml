@@ -1,0 +1,61 @@
+﻿@using WebApp1.Models;
+@model IList<BlogComment>
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<main id="main" class="main">
+    <div class="pagetitle">
+        <h1>Danh sách bình luận</h1>
+        <h2>Bài viết: @ViewBag.BlogTitle</h2>
+    </div>
+
+    <section class="section dashboard">
+        <div class="row">
+            <div class="col-12">
+                <div class="card recent-sales overflow-auto">
+                    <div class="card-body mt-4">
+                        <table class="table table-borderless datatable">
+                            <thead>
+                                <tr>
+                                    <th class="col-1 text-center border">Thứ tự</th>
+                                    <th class="col-1 text-center border">Người bình luận</th>
+                                    <th class="col-4 text-center border">Nội dung</th>
+                                    <th class="col-2 text-center border">Chức năng</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    int i = 1;
+                                }
+                                @foreach (var item in Model)
+                                {
+                                    <tr id="tr_@item.BlogCommentID">
+                                        <td class="text-center border">@(i++)</td>
+                                        <td class ="text-center border">
+                                            @item.Account?.FullName
+                                        </td>
+                                        @{
+                                            var words = item.Detail.Split(new[] { ' '}, StringSplitOptions.RemoveEmptyEntries);
+                                            var limitedText = string.Join(" ", words.Take(10));
+                                        }
+                                        <td class="text-center border">
+                                            @limitedText...
+                                        </td> 
+                                        <td class="text-center border">
+                                            <a asp-area="Admin" asp-controller="BlogComments" asp-action="Details"
+                                               asp-route-id="@item.BlogCommentID" class="btn btn-info "
+                                               title="Chi tiết "><i class="bi bi-eye"></i></a> |
+                                            <a asp-area="Admin" asp-controller="BlogComments" asp-action="Delete"
+                                               asp-route-id="@item.BlogCommentID" class="btn btn-danger "
+                                               title="Xóa "><i class="bi bi-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

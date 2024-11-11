@@ -1,0 +1,41 @@
+﻿@model WebApp1.Models.Contact
+
+<!-- Contact Start -->
+<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+            <h4 class="fw-bold text-primary text-uppercase">Liên hệ với chúng tôi</h4>
+            <h3 class="mb-0">Nếu bạn có bất kỳ thắc mắc nào, vui lòng liên hệ với chúng tôi</h3>
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-6 wow slideInUp" data-wow-delay="0.3s">
+                <form asp-action="Index">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <input asp-for="Name" type="text" class="form-control border-0 bg-light px-4" placeholder="Tên của bạn" style="height: 55px;" required pattern="[A-Za-zÀ-ỹà-ỹ\s]+" title="Vui lòng lại nhập ">
+                        </div>
+                        <div class="col-md-6">
+                            <input asp-for="Class" type="number" class="form-control border-0 bg-light px-4" placeholder="Mã sinh viên" style="height: 55px;" required pattern="[A-Za-z0-9\s]+" title="Vui lòng nhập lại">
+                        </div>
+                        <div class="col-12">
+                            <input asp-for="Email" type="email" class="form-control border-0 bg-light px-4" placeholder="Email" style="height: 55px;" required pattern="[a-z0-9._%+-]+[a-z0-9.-]+\.[a-z]{2,}$" title="Vui lòng nhập đúng định dạng email">
+                        </div>
+                        <div class="col-12">
+                            <textarea asp-for="Message" class="form-control border-0 bg-light px-4 py-3" rows="4" placeholder="Nội dung phản hồi" required minlength="10" title="Vui lòng nhập ít nhất 10 ký tự cho nội dung phản hồi"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary w-100 py-3" type="submit" alert="showMessageBox(Phản hồi đã được gửi!)">Gửi phản hồi</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-6 wow slideInUp" data-wow-delay="0.6s">
+                <iframe class="position-relative rounded w-100 h-100"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.110234938418!2d105.69317477556089!3d18.659048664928974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3139cddf0bf20f23%3A0x86154b56a284fa6d!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBWaW5o!5e0!3m2!1svi!2s!4v1730992578658!5m2!1svi!2s"
+                        frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false"
+                        tabindex="0"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact End -->

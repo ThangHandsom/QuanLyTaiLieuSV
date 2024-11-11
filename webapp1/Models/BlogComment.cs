@@ -19,5 +19,7 @@ namespace WebApp1.Models
         public int? AccountID { get; set; }
         public virtual Account? Account { get; set; }
         public virtual Blog? Blog { get; set; }
+        public virtual ICollection<SubComment> SubComments { get; set; } = new List<SubComment>();
+
     }
 }

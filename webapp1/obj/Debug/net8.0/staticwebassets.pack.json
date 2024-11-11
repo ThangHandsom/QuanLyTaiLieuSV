@@ -5,8 +5,20 @@
       "PackagePath": "staticwebassets\\WebApp1.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\DELL\\source\\repos\\webapp1\\WebApp1\\wwwroot\\Images\\anhgoc.png",
+      "PackagePath": "staticwebassets\\Images\\anhgoc.png"
+    },
+    {
       "Id": "C:\\Users\\DELL\\source\\repos\\webapp1\\WebApp1\\wwwroot\\Images\\avatar.jpg",
       "PackagePath": "staticwebassets\\Images\\avatar.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\webapp1\\WebApp1\\wwwroot\\Images\\avatar_nguyentrongthang.jpg",
+      "PackagePath": "staticwebassets\\Images\\avatar_nguyentrongthang.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\webapp1\\WebApp1\\wwwroot\\Images\\logo đại học vinh.jpg",
+      "PackagePath": "staticwebassets\\Images\\logo đại học vinh.jpg"
     },
     {
       "Id": "C:\\Users\\DELL\\source\\repos\\webapp1\\WebApp1\\wwwroot\\Images\\logovinh.jpg",
@@ -8911,6 +8923,18 @@
     {
       "Id": "C:\\Users\\DELL\\source\\repos\\webapp1\\WebApp1\\wwwroot\\img\\about.jpg",
       "PackagePath": "staticwebassets\\img\\about.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\webapp1\\WebApp1\\wwwroot\\img\\banner-1.jpg",
+      "PackagePath": "staticwebassets\\img\\banner-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\webapp1\\WebApp1\\wwwroot\\img\\banner-2.jpg",
+      "PackagePath": "staticwebassets\\img\\banner-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\webapp1\\WebApp1\\wwwroot\\img\\banner-3.jpg",
+      "PackagePath": "staticwebassets\\img\\banner-3.jpg"
     },
     {
       "Id": "C:\\Users\\DELL\\source\\repos\\webapp1\\WebApp1\\wwwroot\\img\\blog-1.jpg",

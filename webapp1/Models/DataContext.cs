@@ -13,6 +13,10 @@ namespace WebApp1.Models
         public DbSet<Account> Accounts { get; set; }
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<BlogComment> BlogComments { get; set; }
+        public DbSet<SubComment> SubComments { get; set; }
+
         public DbSet<Role> Roles { get; set; }
+        public DbSet<Contact> Contacts { get; set; }    
+      
     }
 }

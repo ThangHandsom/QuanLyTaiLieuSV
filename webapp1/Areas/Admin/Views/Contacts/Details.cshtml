@@ -1,0 +1,45 @@
+﻿@model WebApp1.Models.Contact
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<main id="main" class="main">
+
+<div class="container shadow p-5">
+    <h1>Chi tiết liên hệ</h1>
+    <h4>(Liên hệ)</h4>
+    <hr/>
+    <dl class="row">
+        <dt class = "col-sm-2">
+            <p>Tên sinh viên</p>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+                <p>Tên lớp</p>
+            </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Class)
+        </dd>
+        <dt class = "col-sm-2">
+                <p>Email</p>
+            </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "col-sm-2">
+                <p>Tin nhắn</p>
+            </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Message)
+		</dd>
+    </dl>
+    <div>
+
+            <a asp-action="Index" class="btn btn-primary"><i class="bi bi-box-arrow-in-left"></i> Quay lại</a>
+    </div>
+</div> 
+
+</main>
