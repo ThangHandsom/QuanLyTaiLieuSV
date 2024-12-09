@@ -79,6 +79,67 @@
     <a asp-action="Index">Back to List</a>
 </div>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+<main id="main" class="main">
+    <div class="container shadow p-4">
+        <div class="pagetitle">
+            <h2>Thêm mới Menu Admin</h2>
+        </div>
+    <form method="post">
+        <div asp-validation-summary="All"></div>
+        <div class="form-row">
+            <div class=" form-group col-md-6">
+                    <label asp-for="ItemName">Tên menu</label>
+                    <input type="text" class="form-control mb-3" asp-for="ItemName" placeholder="Nhập tên menu">
+                    <span asp-validation-for="ItemName" class=" alert-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-sm-6">
+                    <label asp-for="ItemLevel">Cấp menu</label>
+                    <select asp-for="ItemLevel" class="form-select" id="Levels">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+        </div>
+        <div class="tox-form-group--maximize col-md-6">
+            <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
+                <label asp-for="ParentLevel">Menu cha</label>
+                <select asp-for="ParentLevel" class="form-control" asp-items="@(new SelectList(ViewBag.mnList,"Value", "Text"))"></select>
+        </div>
+
+        <div class="form-group col-md-6">
+                <label asp-for="AreaName">AreaName</label>
+                <input type="text" class="form-control mb-3" asp-for="AreaName" placeholder="Enter Link">
+                <span asp-validation-for="AreaName" class=" alert-danger"></span>
+        </div>
+
+            <div class="form-group col-md-6">
+                <label asp-for="ItemOrder">Thứ tự</label>
+                <input type="text" class="form-control mb-3" asp-for="ItemOrder" placeholder="Enter MenuOrder">
+                <span asp-validation-for="ItemOrder" class=" alert-danger"></span>
+            </div>
+
+            <div class="form-group col-md-6">
+                <label asp-for="ControllerName">Vị trí</label>
+                <input type="text" class="form-control mb-3" asp-for="ControllerName" placeholder="Enter Position">
+                <span asp-validation-for="ControllerName" class=" alert-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ActionName" class="control-label"></label>
+                <input asp-for="ActionName" class="form-control" />
+                <span asp-validation-for="ActionName" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-6 mt-3 mb-3">
+                <label class="btn btn-group-sm" style="background-color:0A7744;color: black">
+                    @Html.CheckBox("IsActive", true)
+                    Hiển thị
+                </label>
+            </div>
+            <a asp-controller="Menu" asp-action="Index" class="btn btn-lg btn-warning"><i class="bi bi-box-arrow-in-left"></i> Quay lại</a>
+            <button type="submit" value="Save" class="btn btn-lg btn-primary p-2"><i class="bi bi-clipboard-plus"></i> Thêm</button>
+    </form>
+    </div>
+</main>

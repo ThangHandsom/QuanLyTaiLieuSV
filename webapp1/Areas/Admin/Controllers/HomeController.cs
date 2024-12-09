@@ -6,7 +6,7 @@ namespace WebApp1.Areas.Admin.Controllers
     [Area("Admin")]
     public class HomeController : Controller
     {
-        [Authorize(Roles = "1")]
+        [Authorize(Roles = "1,2")]
         public IActionResult Index()
         {
             return View();

@@ -1,0 +1,88 @@
+﻿@model WebApp1.Models.Subject
+
+@{
+    ViewData["Title"] = "Chi Tiết Môn Học";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Subject Details Start -->
+<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-8">
+                <!-- Subject Detail Start -->
+                <div class="mb-5">
+                    <h1 class="mb-4">@Model.SubjectName</h1>
+                    <p><strong>Bộ môn:</strong> @Model.Department</p>
+                    <p><strong>Số tín chỉ:</strong> @Model.Credits</p>
+                    <p><strong>Kỳ học:</strong> @Model.Semester</p>
+                </div>
+
+                <!-- Document List Start -->
+                <div class="mb-5">
+                    <h3 class="mb-4">Danh sách tài liệu</h3>
+                    @if (Model.Documents != null && Model.Documents.Any())
+                    {
+                                <style>
+                                    .table th, .table td {
+                                        border: 1px solid #ddd;
+                                    }
+                                </style>
+
+                                <table id="documentTable" class="table table-borderless datatable">
+                                    <thead>
+                                        <tr>
+                                            <th class="col-1 text-center">Thứ tự</th>
+                                            <th class="col-3 text-center">Tên tệp</th>
+                                            <th class="col-2 text-center">Chức năng</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @{
+                                            int i = 1;
+                                        }
+                                        @foreach (var item in Model.Documents)
+                                        {
+                                            <tr id="tr_@item.DocumentID">
+                                                <td class="text-center">@(i++)</td>
+                                                <td class="text-center">@item.DocumentName</td>
+                                                <td class="text-center">
+                                                    <a href="@item.FilePath" class="btn btn-sm btn-primary me-2">Xem</a>
+                                                    <a href="@Url.Content("~/"+ item.FilePath.TrimStart('/'))" class="btn btn-sm btn-success">Tải xuống</a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+
+                    }
+                    else
+                    {
+                        <p>Không có tài liệu nào cho môn học này.</p>
+                    }
+                </div>
+                <!-- Document List End -->
+            </div>
+            <!-- Subject Detail End -->
+            <!-- Sidebar Start -->
+            <div class="col-lg-4">
+        
+                <!-- Recent Subjects Start -->
+                <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
+                    <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                        <h3 class="mb-0">Môn Học Liên Quan</h3>
+                    </div>
+                    <div class="d-flex rounded overflow-hidden mb-3">
+                        <img class="img-fluid" src="~/img/blog-2.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="" />
+                        <a href="#" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">
+                            Môn học khác
+                        </a>
+                    </div>
+                </div>
+                <!-- Recent Subjects End -->
+            </div>
+            <!-- Sidebar End -->
+        </div>
+    </div>
+</div>
+<!-- Subject Details End -->

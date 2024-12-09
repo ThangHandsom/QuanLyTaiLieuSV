@@ -13,6 +13,8 @@ using X.PagedList.Extensions;
 namespace WebApp1.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "1")]
+
     public class AccountsController : Controller
     {
         private readonly DataContext _context;

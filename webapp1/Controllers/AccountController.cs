@@ -25,6 +25,7 @@ namespace WebApp1.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public IActionResult Login(string username, string password)
         {
@@ -39,11 +40,11 @@ namespace WebApp1.Controllers
             Functions._Message = string.Empty;
 
             var claims = new List<Claim>
-            {
-                new Claim(ClaimTypes.Name, user.UserName),
-                new Claim(ClaimTypes.Role, user.RoleID.ToString()),
-                new Claim("AccountId", user.AccountID.ToString()) 
-            };
+    {
+        new Claim(ClaimTypes.Name, user.UserName),
+        new Claim(ClaimTypes.Role, user.RoleID.ToString()),
+        new Claim("AccountId", user.AccountID.ToString())
+    };
 
             var claimsIdentity = new ClaimsIdentity(
                 claims, CookieAuthenticationDefaults.AuthenticationScheme);
@@ -53,9 +54,17 @@ namespace WebApp1.Controllers
                 new ClaimsPrincipal(claimsIdentity)
             );
 
-            return RedirectToAction("Index", "Home");
-        }
+            if (user.RoleID == 1 || user.RoleID == 2) 
+            {
+                return RedirectToAction("Index", "Admin");
+            }
+            else if (user.RoleID == 3)
+            {
+                return RedirectToAction("Index", "Home");
+            }
 
+            return RedirectToAction("Login");
+        }
         public IActionResult Register()
         {
             return View();

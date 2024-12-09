@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebApp1.Models;
 using WebApp1.Utilities;
@@ -6,6 +7,8 @@ using WebApp1.Utilities;
 namespace WebApp1.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "1")]
+
     public class ContactsController : Controller
     {
         private readonly DataContext _context;

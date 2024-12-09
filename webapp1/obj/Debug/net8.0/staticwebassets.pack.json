@@ -21,8 +21,64 @@
       "PackagePath": "staticwebassets\\Images\\logo đại học vinh.jpg"
     },
     {
+      "Id": "C:\\Users\\DELL\\source\\repos\\webapp1\\WebApp1\\wwwroot\\Images\\logoshop.png",
+      "PackagePath": "staticwebassets\\Images\\logoshop.png"
+    },
+    {
       "Id": "C:\\Users\\DELL\\source\\repos\\webapp1\\WebApp1\\wwwroot\\Images\\logovinh.jpg",
       "PackagePath": "staticwebassets\\Images\\logovinh.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\webapp1\\WebApp1\\wwwroot\\Images\\user-1.jpg",
+      "PackagePath": "staticwebassets\\Images\\user-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\webapp1\\WebApp1\\wwwroot\\Uploads\\BaiThucHanh4_CaseStudy_.pdf",
+      "PackagePath": "staticwebassets\\Uploads\\BaiThucHanh4_CaseStudy_.pdf"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\webapp1\\WebApp1\\wwwroot\\Uploads\\Chương 1.pdf",
+      "PackagePath": "staticwebassets\\Uploads\\Chương 1.pdf"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\webapp1\\WebApp1\\wwwroot\\Uploads\\Chương 2.pdf",
+      "PackagePath": "staticwebassets\\Uploads\\Chương 2.pdf"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\webapp1\\WebApp1\\wwwroot\\Uploads\\Chương 3.pdf",
+      "PackagePath": "staticwebassets\\Uploads\\Chương 3.pdf"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\webapp1\\WebApp1\\wwwroot\\Uploads\\Chương 4.pdf",
+      "PackagePath": "staticwebassets\\Uploads\\Chương 4.pdf"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\webapp1\\WebApp1\\wwwroot\\Uploads\\Chương 6.pdf",
+      "PackagePath": "staticwebassets\\Uploads\\Chương 6.pdf"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\webapp1\\WebApp1\\wwwroot\\Uploads\\Chương 7.pdf",
+      "PackagePath": "staticwebassets\\Uploads\\Chương 7.pdf"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\webapp1\\WebApp1\\wwwroot\\Uploads\\Nguyễn Trọng Thắng.pdf",
+      "PackagePath": "staticwebassets\\Uploads\\Nguyễn Trọng Thắng.pdf"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\webapp1\\WebApp1\\wwwroot\\Uploads\\Nguyễn-Trọng-Thắng.docx",
+      "PackagePath": "staticwebassets\\Uploads\\Nguyễn-Trọng-Thắng.docx"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\webapp1\\WebApp1\\wwwroot\\Uploads\\Nhóm6CNPM.pptx",
+      "PackagePath": "staticwebassets\\Uploads\\Nhóm6CNPM.pptx"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\webapp1\\WebApp1\\wwwroot\\Uploads\\Tham_kho_Bao_cao_bai_tp_ln_d_an_cac.pdf",
+      "PackagePath": "staticwebassets\\Uploads\\Tham_kho_Bao_cao_bai_tp_ln_d_an_cac.pdf"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\webapp1\\WebApp1\\wwwroot\\Uploads\\test1.docx",
+      "PackagePath": "staticwebassets\\Uploads\\test1.docx"
     },
     {
       "Id": "C:\\Users\\DELL\\source\\repos\\webapp1\\WebApp1\\wwwroot\\admin\\assets\\css\\style.css",
@@ -8917,8 +8973,28 @@
       "PackagePath": "staticwebassets\\files\\Ảnh chụp màn hình 2024-10-15 094427.png"
     },
     {
+      "Id": "C:\\Users\\DELL\\source\\repos\\webapp1\\WebApp1\\wwwroot\\files\\Nguyễn Trọng Thắng.pdf",
+      "PackagePath": "staticwebassets\\files\\Nguyễn Trọng Thắng.pdf"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\webapp1\\WebApp1\\wwwroot\\files\\Nhóm6CNPM.pptx",
+      "PackagePath": "staticwebassets\\files\\Nhóm6CNPM.pptx"
+    },
+    {
       "Id": "C:\\Users\\DELL\\source\\repos\\webapp1\\WebApp1\\wwwroot\\files\\Picture1.png",
       "PackagePath": "staticwebassets\\files\\Picture1.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\webapp1\\WebApp1\\wwwroot\\files\\logo.jpg",
+      "PackagePath": "staticwebassets\\files\\logo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\webapp1\\WebApp1\\wwwroot\\files\\test1.docx",
+      "PackagePath": "staticwebassets\\files\\test1.docx"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\webapp1\\WebApp1\\wwwroot\\files\\test2.pdf",
+      "PackagePath": "staticwebassets\\files\\test2.pdf"
     },
     {
       "Id": "C:\\Users\\DELL\\source\\repos\\webapp1\\WebApp1\\wwwroot\\img\\about.jpg",

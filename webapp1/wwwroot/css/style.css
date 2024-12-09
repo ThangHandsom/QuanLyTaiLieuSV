@@ -1,4 +1,4 @@
-/********** Template CSS **********/
+﻿/********** Template CSS **********/
 :root {
     --primary: #06A3DA;
     --secondary: #34AD54;
@@ -6,6 +6,56 @@
     --dark: #091E3E;
 }
 
+/* Định dạng cho danh sách tài liệu */
+ul.list-unstyled {
+    margin: 0;
+    padding: 0;
+}
+
+    ul.list-unstyled li {
+        display: flex;
+        align-items: center;
+        padding: 8px 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+        ul.list-unstyled li:last-child {
+            border-bottom: none;
+        }
+
+        ul.list-unstyled li i {
+            font-size: 20px;
+            margin-right: 10px;
+            color: #f44336; /* Màu đỏ biểu tượng */
+        }
+
+        ul.list-unstyled li span {
+            flex-grow: 1;
+            font-size: 16px;
+        }
+
+/* Định dạng cho các nhóm chương */
+h5.text-primary {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #007bff; /* Màu xanh */
+}
+
+/* Nút bấm */
+.btn-sm {
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
 
 /*** Spinner ***/
 .spinner {

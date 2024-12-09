@@ -1,0 +1,48 @@
+﻿@model WebApp1.Models.Subject
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<main id="main" class="main">
+    <div class="container shadow p-4">
+        <div class="pagetitle">
+            <h2>Thêm mới Môn học</h2>
+        </div>
+        <form method="post">
+            <div asp-validation-summary="All"></div>
+            <div class="form-row">
+                <div class=" form-group col-md-6">
+                    <label asp-for="SubjectName">Tên môn học</label>
+                    <input type="text" class="form-control mb-3" asp-for="SubjectName" placeholder="Nhập tên môn học">
+                    <span asp-validation-for="SubjectName" class=" alert-danger"></span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class=" form-group col-md-6">
+                    <label asp-for="Alias">Đường dẫn</label>
+                    <input type="text" class="form-control mb-3" asp-for="Alias" placeholder="Nhập đường dẫn">
+                    <span asp-validation-for="Alias" class=" alert-danger"></span>
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="Credits">Số tín chỉ</label>
+                <input type="text" class="form-control mb-3" asp-for="Credits" placeholder="Nhập số tín chỉ">
+                <span asp-validation-for="Credits" class=" alert-danger"></span>
+            </div>
+
+            <div class="form-group col-md-6">
+                <label asp-for="Department">Khoa</label>
+                <input type="text" class="form-control mb-3" asp-for="Department" placeholder="Nhập tên khoa/ngành">
+                <span asp-validation-for="Department" class=" alert-danger"></span>
+            </div>
+
+            <div class="form-group col-md-6">
+                <label asp-for="Semester">Học kì</label>
+                <input type="text" class="form-control mb-3" asp-for="Semester" placeholder="Nhập học kì">
+                <span asp-validation-for="Semester" class=" alert-danger"></span>
+            </div>
+
+            <a asp-controller="Subject" asp-action="Index" class="btn btn-lg btn-warning"><i class="bi bi-box-arrow-in-left"></i> Quay lại</a>
+            <button type="submit" value="Save" class="btn btn-lg btn-primary p-2"><i class="bi bi-clipboard-plus"></i> Thêm</button>
+        </form>
+    </div>
+</main>

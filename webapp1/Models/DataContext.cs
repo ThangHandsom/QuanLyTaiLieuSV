@@ -16,7 +16,12 @@ namespace WebApp1.Models
         public DbSet<SubComment> SubComments { get; set; }
 
         public DbSet<Role> Roles { get; set; }
-        public DbSet<Contact> Contacts { get; set; }    
-      
+        public DbSet<Contact> Contacts { get; set; }
+        public DbSet<Footer> Footers { get; set; }
+
+        public DbSet<Subject> Subjects { get; set; }
+        public DbSet<Document> Documents { get; set; }
+
+
     }
 }

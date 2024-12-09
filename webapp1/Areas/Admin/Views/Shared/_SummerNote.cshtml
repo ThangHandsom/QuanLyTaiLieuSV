@@ -69,7 +69,11 @@
             destroyOnClose: true,
             getFileCallback: function (files, fm) {
                 console.log(files);
-                editor.invoke('editor.insertImage', files.url);
+                if (files.mime === "image/jpeg" || files.mime === "image/png" || files.mime === "image/gif") {
+                    editor.invoke('editor.insertImage', files.url);
+                } else {
+                    editor.invoke('editor.insertText', '<a href="' + files.url + '" target="_blank">' + files.name + '</a>');
+                }
             },
             commandsOptions: {
                 getfile: {
@@ -160,7 +164,13 @@
                     'rm', '|', 'edit', 'rename', 'resize', '|', 'archive', 'extract', '|', 'info'
                 ]
             },
-            onlyMimes: ["image"],
+            onlyMimes: ["image",
+                "application/pdf",
+                "application/msword",
+                "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                "application/vnd.ms-powerpoint",
+                "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+            ]
         }).dialogelfinder('instance');
     }
 

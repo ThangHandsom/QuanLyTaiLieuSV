@@ -1,6 +1,7 @@
 ﻿using WebApp1.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +22,8 @@ builder.Services.AddSession(cfg => {                    // Đăng k? d?ch v? Ses
     cfg.Cookie.Name = "data";             // Đ?t tên Session - tên này s? d?ng ? Browser (Cookie)
     cfg.IdleTimeout = new TimeSpan(0, 30, 0);    // Th?i gian t?n t?i c?a Session
 });
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -30,6 +33,16 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
+app.UseStaticFiles();
+
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(),"wwwroot", "files")),
+    RequestPath = "/files" 
+});
+
+
 //session
 app.UseSession();
 

@@ -1,0 +1,61 @@
+﻿@model IEnumerable<WebApp1.Models.Subject>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<main id="main" class="main">
+    <div class="pagetitle">
+        <h2>Danh sách môn học </h2>
+    </div>
+
+    <p>
+        <a type="button" class="btn btn-success" asp-area="Admin" asp-controller="Subject" asp-action="Create" style="background-color:#49c1c5">
+            <i class="bi bi-plus"></i>Thêm Môn
+        </a>
+    </p>
+    <section class="section dashboard">
+        <div class="row">
+            <div class="col-12">
+                <div class="card recent-sales overflow-auto">
+                    <div class="card-body mt-4">
+                        <table class="table table-borderless datatable">
+                            <thead>
+                                <tr>
+                                    <th class="col-1 text-center">Thứ tự</th>
+                                    <th class="col-3 text-center">Tên môn</th>
+                                    <th class="col-2 text-center">Số tín chỉ</th>
+                                    <th class="col-2 text-center">Khoa</th>
+                                    <th class="col-2 text-center">Chức năng</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    int i = 1;
+                                }
+                                @foreach (var item in Model)
+                                {
+                                    <tr id="tr_@item.SubjectID">
+                                        <td class="text-center">@(i++)</td>
+                                        <td class="text-center">@item.SubjectName</td>
+                                        <td class="text-center">@item.Credits</td>
+                                        <td class="text-center">@item.Department</td>
+                                        <td class="text-center">
+                                            <a asp-area="Admin" asp-controller="Subject" asp-action="Edit" asp-route-id="@item.SubjectID" class="btn btn-primary " title="Sửa thông tin "><i class="bi bi-pencil-square"></i></a> |
+                                            <a asp-area="Admin" asp-controller="Documents" asp-action="Index"
+                                               asp-route-id="@item.SubjectID" class="btn btn-info "
+                                               title="Xem tài liệu "><i class="bi bi-eye"></i></a> |
+                                            <a asp-area="Admin" asp-controller="Subject" asp-action="Delete" asp-route-id="@item.SubjectID" class="btn btn-danger "
+                                               title="Xóa "><i class="bi bi-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

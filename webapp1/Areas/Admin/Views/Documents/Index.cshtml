@@ -1,0 +1,65 @@
+﻿@model IEnumerable<WebApp1.Models.Document>
+
+@{
+    ViewData["Title"] = "Danh sách tài liệu";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<main id="main" class="main">
+    <div class="pagetitle">
+        <h2>Danh sách tài liệu</h2>
+        <h3>Môn học: @ViewBag.SubjectName</h3> 
+    </div>
+
+    <p>
+        <a type="button" class="btn btn-success"
+           asp-area="Admin" asp-controller="Documents" asp-action="Create" asp-route-subjectId="@ViewBag.SubjectID"
+           style="background-color:#49c1c5">
+            <i class="bi bi-plus"></i> Thêm tệp
+        </a>
+    </p>
+
+    <section class="section dashboard">
+        <div class="row">
+            <div class="col-12">
+                <div class="card recent-sales overflow-auto">
+                    <div class="card-body mt-4">
+                        <table class="table table-borderless datatable">
+                            <thead>
+                                <tr>
+                                    <th class="col-1 text-center">Thứ tự</th>
+                                    <th class="col-3 text-center">Tên tệp</th>
+                                    <th class="col-2 text-center">Định dạng</th>
+                                    <th class="col-2 text-center">Chức năng</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    int i = 1;
+                                }
+                                @foreach (var item in Model)
+                                {
+                                    <tr id="tr_@item.DocumentID">
+                                        <td class="text-center">@(i++)</td>
+                                        <td class="text-center">@item.DocumentName</td>
+                                        <td class="text-center">@item.FilePath</td>
+                                        <td class="text-center">
+                                            <a asp-area="Admin" asp-controller="Documents" asp-action="Edit" asp-route-subjectId="@ViewBag.SubjectID" asp-route-id="@item.DocumentID"
+                                               class="btn btn-primary" title="Sửa thông tin">
+                                                <i class="bi bi-pencil-square"></i>
+                                            </a> |
+                                            <a asp-area="Admin" asp-controller="Documents" asp-action="Delete" asp-route-id="@item.DocumentID" asp-route-subjectId="@ViewBag.SubjectID"
+                                               class="btn btn-danger" title="Xóa">
+                                                <i class="bi bi-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
